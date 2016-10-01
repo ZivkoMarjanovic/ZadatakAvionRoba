@@ -57,8 +57,9 @@ public class Roba {
     public void setNaziv (String naziv) {this.naziv = naziv;}
     public void setOpis (String opis) {this.opis = opis;}
     public void setTezina (double tezina) {this.tezina = tezina;}
-
-
+    public void setVisina (double visina) {this.tezina = visina;}
+    public void setDuzina (double duzina) {this.tezina = duzina;}
+    public void setSirina (double sirina) {this.tezina = sirina;}
     public void setAvion (Avion avion) {this.avion = avion;}
 
 
@@ -66,7 +67,9 @@ public class Roba {
     public int getId () {return id;}
     public String getNaziv () {return naziv;}
     public String getOpis () {return opis;}
-
+    public double getVisina () {return visina;}
+    public double getDuzina () {return duzina;}
+    public double getSirina () {return sirina;}
     public double getTezina () {return tezina;}
     public Avion getKnjiga () {return avion;}
 
