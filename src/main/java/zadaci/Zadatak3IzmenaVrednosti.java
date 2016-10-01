@@ -8,6 +8,7 @@ import model.Avion;
 import model.Roba;
 
 import java.io.IOException;
+import java.util.List;
 
 /**
  * Created by Živko on 2016-10-01.
@@ -25,6 +26,21 @@ public class Zadatak3IzmenaVrednosti {
 
             avionDao= DaoManager.createDao(cs, Avion.class);
             robaDao= DaoManager.createDao(cs, Roba.class);
+
+            List<Roba> robaList = robaDao.queryForAll();
+            for (Roba r: robaList) {
+                System.out.println(r.toString());
+            }
+
+            List<Roba> robaList1 = robaDao.queryForEq(Roba.POLJE_OPIS, "Plasticna stolica");
+            Roba robaZaIzmenu = robaList1.get(0);
+            robaZaIzmenu.setOpis("Drvena stolica");
+            robaDao.update(robaZaIzmenu);
+
+            robaList = robaDao.queryForAll();
+            for (Roba r: robaList) {
+                System.out.println(r.toString());
+            }
 
 
 
