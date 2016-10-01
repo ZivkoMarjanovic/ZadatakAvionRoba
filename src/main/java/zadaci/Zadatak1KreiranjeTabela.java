@@ -19,7 +19,7 @@ public class Zadatak1KreiranjeTabela {
         ConnectionSource cs = null;
 
         try {
-            cs = new JdbcConnectionSource("jdbc:sqlite:knjigaOblast.db");
+            cs = new JdbcConnectionSource("jdbc:sqlite:avionRoba.db");
 
 
             TableUtils.dropTable(cs, Roba.class, true);
